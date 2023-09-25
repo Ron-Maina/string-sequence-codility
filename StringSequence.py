@@ -18,9 +18,9 @@ def solution(S):
 
     # if first and last letter in S don't match checks the remaining iterations     
     else:
+        new_str = S[1:] + S[0]
         for i in range(len(S)):
-            new_str = S[1:] + S[0]
-            
+             
             if new_str[0] == new_str[len(new_str) - 1]:
                 count += 1
                 new_str = new_str[1:] + new_str[0]
@@ -31,3 +31,5 @@ def solution(S):
 solution("abbaa")
 solution("abab")
 solution("aaaa")
+solution("aabbab")
+
